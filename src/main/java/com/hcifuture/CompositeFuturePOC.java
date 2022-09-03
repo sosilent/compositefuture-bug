@@ -1,14 +1,10 @@
-package poc.future;
+package com.hcifuture;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.CompositeFuture;
 import io.vertx.core.Future;
 import io.vertx.core.Promise;
 import io.vertx.core.json.JsonObject;
-import io.vertx.ext.web.client.HttpResponse;
-import io.vertx.ext.web.client.WebClient;
-import io.vertx.ext.web.client.predicate.ResponsePredicate;
-import io.vertx.ext.web.codec.BodyCodec;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,12 +13,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class CompositeFuturePOC extends AbstractVerticle {
 
-  private final Logger logger = LoggerFactory.getLogger(poc.future.CompositeFuturePOC.class);
-  private WebClient webClient;
+  private final Logger logger = LoggerFactory.getLogger(CompositeFuturePOC.class);
 
   @Override
   public void start(Promise<Void> promise) {
-    webClient = WebClient.create(vertx);
 
     printDateTime("Starting");
 

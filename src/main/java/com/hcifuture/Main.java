@@ -1,4 +1,4 @@
-package poc.future;
+package com.hcifuture;
 
 import io.vertx.core.Vertx;
 
@@ -6,6 +6,6 @@ public class Main {
 
   public static void main(String[] args) {
     Vertx vertx = Vertx.vertx();
-    vertx.deployVerticle("poc.future.CompositeFuturePOC");
+    vertx.deployVerticle("com.hcifuture.CompositeFuturePOC");
   }
 }
